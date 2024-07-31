@@ -1,0 +1,48 @@
+--Identificação de informações repetidas na Tabela Chaco 
+
+--Contagem das spp totais do Chaco
+SELECT species, COUNT (species)
+from chaco
+GROUP by species
+HAVING COUNT (species) 
+ORDER by COUNT (species) DESC;
+
+--Contagem das spp no Chaco Argentina
+SELECT species, country, 
+COUNT (species)
+FROM chaco 
+WHERE country = 'Argentina'
+GROUP by species
+HAVING COUNT (species)
+ORDER by COUNT (species) DESC
+;
+
+--Contagem das spp no Chaco Bolivia
+SELECT species, country, 
+COUNT (species)
+FROM chaco 
+WHERE country = 'Bolivia'
+GROUP by species
+HAVING COUNT (species)
+ORDER by COUNT (species) DESC
+;
+
+--Contagem das spp no Chaco Brasil
+SELECT species, country, 
+COUNT (species)
+FROM chaco 
+WHERE country = 'Brasil'
+GROUP by species
+HAVING COUNT (species)
+ORDER by COUNT (species) DESC
+;
+
+--Contagem das spp no Chaco Paraguai
+SELECT species, country, 
+COUNT (species)
+FROM chaco 
+WHERE country = 'Paraguay'
+GROUP by species
+HAVING COUNT (species)
+ORDER by COUNT (species) DESC
+;
