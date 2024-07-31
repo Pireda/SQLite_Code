@@ -1,0 +1,7 @@
+--Selecionado espécies baseada em filtros específicos 
+
+SELECT species, country, annual_precipitation, max_temperature, severity_of_water_deficit_periods
+FROM chaco_clima
+WHERE annual_precipitation < 400
+AND max_temperature > 34
+and severity_of_water_deficit_periods < 169;
