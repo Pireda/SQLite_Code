@@ -1,0 +1,6 @@
+--Co-ocorrência de spp usando clausula LEFT JOIN
+SELECT chaco.species [species_chaco], caatinga.species [species_caatinga]
+FROM chaco
+LEFT JOIN caatinga
+ON chaco.species = caatinga.species
+;
