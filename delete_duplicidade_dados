@@ -1,0 +1,7 @@
+--Delete dados duplicados na tabela
+DELETE from chaco
+WHERE ROWID NOT IN(
+	SELECT MIN (ROWID)
+    FROM chaco
+    GROUP BY species
+);
